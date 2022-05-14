@@ -1,0 +1,69 @@
+body {
+    background-color: #25282a;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+    display: flex;
+    gap: 3vh;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vh 2vw;
+    width: 96vw;
+    height: 96vh;
+}
+
+.slider__wrapper {
+    flex: 0 0 80vh;
+    overflow: hidden;
+}
+
+.slider__wrapper li {
+    display: grid;
+    position: relative;
+    width: 96vw;
+    top: 0vh;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.slider__wrapper img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.slider__footer {
+    display: flex;
+    gap: 5vw;
+    flex-wrap: wrap-reverse;
+    width: 85vw;
+    justify-content: space-around;
+}
+
+.slider__title::after {
+    content: "Здесь будет title";
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    color: #ffe2ad;
+}
+
+.slider__buttons {
+    margin: auto 0;
+}
+
+.slider__buttons input {
+    margin: 5px;
+}
