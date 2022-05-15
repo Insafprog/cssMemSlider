@@ -5,6 +5,9 @@
 
 body {
     background-color: #25282a;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .slider {
@@ -23,30 +26,32 @@ body {
 }
 
 .slider__wrapper {
-    width: 96vw;
-    height: 80vh;
+    padding: 2vh 2vw;
+    width: 92vw;
+    height: 76vh;
     overflow: hidden;
 }
 
 .slider__wrapper img {
     border-radius: 10px;
-    max-height: 80vh;
-    max-width: 96vw;
+    max-height: 92vw;
+    max-width: 76vh;
 }
 
 .slider__wrapper  ul {
     position: relative;
     left: 0vw;
     display: grid;
-    grid: 80vh / repeat(13, 96vw);
+    /* grid: 76vh / repeat(13, 92vw); */
+    grid-template-columns: repeat(13, 92vw);
     align-items: center;
     transition: left 2s;
 }
 
 .slider__wrapper li {
     display: grid;
-    width: 96vw;
-    height: 80vh;
+    width: 92vw;
+    height: 76vh;
     list-style-type: none;
     align-items: center;
     justify-content: center;
@@ -55,7 +60,7 @@ body {
 .nav {
     display: flex;
     gap: 2px;
-    
+    flex: 0 0 auto;
 }
 
 .nav_btn {
@@ -81,78 +86,141 @@ body {
     background-color: #ffffff;
 }
 
-#radio_1:checked~.nav>.nav_btn_1::after,
-#radio_2:checked~.nav>.nav_btn_2::after,
-#radio_3:checked~.nav>.nav_btn_3::after,
-#radio_4:checked~.nav>.nav_btn_4::after,
-#radio_5:checked~.nav>.nav_btn_5::after,
-#radio_6:checked~.nav>.nav_btn_6::after,
-#radio_7:checked~.nav>.nav_btn_7::after,
-#radio_8:checked~.nav>.nav_btn_8::after,
-#radio_9:checked~.nav>.nav_btn_9::after,
-#radio_10:checked~.nav>.nav_btn_10::after,
-#radio_11:checked~.nav>.nav_btn_11::after,
-#radio_12:checked~.nav>.nav_btn_12::after,
-#radio_13:checked~.nav>.nav_btn_13::after {
+#footer {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+}
+
+.slider__title {
+    flex: 1 0 auto;
+    max-width: 85vw;
+}
+
+#radio_1:checked~#footer .nav_btn_1::after,
+#radio_2:checked~#footer .nav_btn_2::after,
+#radio_3:checked~#footer .nav_btn_3::after,
+#radio_4:checked~#footer .nav_btn_4::after,
+#radio_5:checked~#footer .nav_btn_5::after,
+#radio_6:checked~#footer .nav_btn_6::after,
+#radio_7:checked~#footer .nav_btn_7::after,
+#radio_8:checked~#footer .nav_btn_8::after,
+#radio_9:checked~#footer .nav_btn_9::after,
+#radio_10:checked~#footer .nav_btn_10::after,
+#radio_11:checked~#footer .nav_btn_11::after,
+#radio_12:checked~#footer .nav_btn_12::after,
+#radio_13:checked~#footer .nav_btn_13::after {
     background: none;
 }
 
 #radio_1:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 0)
+    left: calc(-92vw * 0)
 }
 
 #radio_2:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 1)
+    left: calc(-92vw * 1)
 }
 
 #radio_3:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 2)
+    left: calc(-92vw * 2)
 }
 
 #radio_4:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 3)
+    left: calc(-92vw * 3)
 }
 
 #radio_5:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 4)
+    left: calc(-92vw * 4)
 }
 
 #radio_6:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 5)
+    left: calc(-92vw * 5)
 }
 
 #radio_7:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 6)
+    left: calc(-92vw * 6)
 }
 
 #radio_8:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 7)
+    left: calc(-92vw * 7)
 }
 
 #radio_9:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 8)
+    left: calc(-92vw * 8)
 }
 
 #radio_10:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 9)
+    left: calc(-92vw * 9)
 }
 
 #radio_11:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 10)
+    left: calc(-92vw * 10)
 }
 
 #radio_12:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 11)
+    left: calc(-92vw * 11)
 }
 
 #radio_13:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 12)
+    left: calc(-92vw * 12)
 }
 
-
 .slider__title::after {
-    content: "Здесь будет контент";
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2em;
+    font-size: 1em;
     color: #ffe2ad;
+}
+
+#radio_1:checked~#footer .slider__title::after {
+    content: "В любой ситуации важно взаимопонимание. В простом общении:"
+}
+
+#radio_2:checked~#footer .slider__title::after {
+    content: "В общении между заказчиком, менеджером и разработчиком:"
+}
+
+#radio_3:checked~#footer .slider__title::after {
+    content: "Или в оперативном общении по проекту:"
+}
+
+#radio_4:checked~#footer .slider__title::after {
+    content: "Чтобы в итоге сделать хороший продукт:"
+}
+
+#radio_5:checked~#footer .slider__title::after {
+    content: "Функциональный:"
+}
+
+#radio_6:checked~#footer .slider__title::after {
+    content: "И удобный:"
+}
+
+#radio_7:checked~#footer .slider__title::after {
+    content: "Не без рабочих моментов, конечно. Recursion be like…"
+}
+
+#radio_8:checked~#footer .slider__title::after {
+    content: "Google подтвержает:"
+}
+
+#radio_9:checked~#footer .slider__title::after {
+    content: "И не только рекурсия:"
+}
+
+#radio_10:checked~#footer .slider__title::after {
+    content: "И не только рекурсия:"
+}
+
+#radio_11:checked~#footer .slider__title::after {
+    content: "И не только рекурсия:"
+}
+
+#radio_12:checked~#footer .slider__title::after {
+    content: "А в случае чего – иметь возможность откатиться назад:"
+}
+
+#radio_13:checked~#footer .slider__title::after {
+    content: "На этом все! Хороших работ."
 }
