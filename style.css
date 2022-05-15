@@ -1,20 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #25282a;
-    margin: 0;
-    padding: 0;
-}
-
-ul {
-    padding: 0;
-    margin: 0;
-}
-
-h3 {
-    margin: 0;
-    padding: 0;
 }
 
 .slider {
+    margin: 2vh 2vw;
+    width: 96vw;
+    height: 96vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3vh;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider__wrapper {
+    width: 96vw;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.slider__wrapper img {
+    border-radius: 10px;
+    max-height: 80vh;
+    max-width: 96vw;
+}
+
+.slider__wrapper  ul {
+    position: relative;
+    left: -192vw;
+    display: grid;
+    grid: 80vh / repeat(13, 96vw);
+    align-items: center;
+}
+
+.slider__wrapper li {
+    display: grid;
+    width: 96vw;
+    height: 80vh;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+    gap: 2px;
+    
+}
+
+.nav_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.nav_btn::after {
+    content: "";
+    border: 2px solid #71a5f1;
+    background-color: #71a5f1;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.nav_btn:hover::after {
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+}
+
+#radio_1:checked~.nav>.nav_btn_1::after,
+#radio_2:checked~.nav>.nav_btn_2::after,
+#radio_3:checked~.nav>.nav_btn_3::after,
+#radio_4:checked~.nav>.nav_btn_4::after,
+#radio_5:checked~.nav>.nav_btn_5::after,
+#radio_6:checked~.nav>.nav_btn_6::after,
+#radio_7:checked~.nav>.nav_btn_7::after,
+#radio_8:checked~.nav>.nav_btn_8::after,
+#radio_9:checked~.nav>.nav_btn_9::after,
+#radio_10:checked~.nav>.nav_btn_10::after,
+#radio_11:checked~.nav>.nav_btn_11::after,
+#radio_12:checked~.nav>.nav_btn_12::after,
+#radio_13:checked~.nav>.nav_btn_13::after {
+    background: none;
+}
+
+/* .slider {
     display: flex;
     gap: 3vh;
     flex-direction: column;
@@ -53,8 +135,17 @@ h3 {
     justify-content: space-around;
 }
 
+.slider__buttons input {
+    margin: 5px;
+}
+
+.slider__buttons input:checked, .slider__title::after {
+    --content: var(--c);
+    content: var(--content);
+}
+
 .slider__title::after {
-    content: "Здесь будет title";
+    
     font-family: 'Times New Roman', Times, serif;
     font-size: 2em;
     color: #ffe2ad;
@@ -63,7 +154,11 @@ h3 {
 .slider__buttons {
     margin: auto 0;
 }
+ */
 
-.slider__buttons input {
-    margin: 5px;
+ .slider__title::after {
+    content: "Здесь будет контент";
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    color: #ffe2ad;
 }
