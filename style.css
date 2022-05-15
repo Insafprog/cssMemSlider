@@ -36,10 +36,11 @@ body {
 
 .slider__wrapper  ul {
     position: relative;
-    left: -192vw;
+    left: 0vw;
     display: grid;
     grid: 80vh / repeat(13, 96vw);
     align-items: center;
+    transition: left 2s;
 }
 
 .slider__wrapper li {
@@ -96,67 +97,60 @@ body {
     background: none;
 }
 
-/* .slider {
-    display: flex;
-    gap: 3vh;
-    flex-direction: column;
-    align-items: center;
-    margin: 2vh 2vw;
-    width: 96vw;
-    height: 96vh;
+#radio_1:checked~.slider__wrapper>ul {
+    left: calc(-96vw * 0)
 }
 
-.slider__wrapper {
-    flex: 0 0 80vh;
-    overflow: hidden;
+#radio_2:checked~.slider__wrapper>ul {
+    left: calc(-96vw * 1)
 }
 
-.slider__wrapper li {
-    display: grid;
-    position: relative;
-    width: 96vw;
-    top: 0vh;
-    height: 80vh;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
+#radio_3:checked~.slider__wrapper>ul {
+    left: calc(-96vw * 2)
 }
 
-.slider__wrapper img {
-    max-height: 100%;
-    max-width: 100%;
+#radio_4:checked~.slider__wrapper>ul {
+    left: calc(-96vw * 3)
 }
 
-.slider__footer {
-    display: flex;
-    gap: 5vw;
-    flex-wrap: wrap-reverse;
-    width: 85vw;
-    justify-content: space-around;
+#radio_5:checked~.slider__wrapper>ul {
+    left: calc(-96vw * 4)
 }
 
-.slider__buttons input {
-    margin: 5px;
+#radio_6:checked~.slider__wrapper>ul {
+    left: calc(-96vw * 5)
 }
 
-.slider__buttons input:checked, .slider__title::after {
-    --content: var(--c);
-    content: var(--content);
+#radio_7:checked~.slider__wrapper>ul {
+    left: calc(-96vw * 6)
 }
+
+#radio_8:checked~.slider__wrapper>ul {
+    left: calc(-96vw * 7)
+}
+
+#radio_9:checked~.slider__wrapper>ul {
+    left: calc(-96vw * 8)
+}
+
+#radio_10:checked~.slider__wrapper>ul {
+    left: calc(-96vw * 9)
+}
+
+#radio_11:checked~.slider__wrapper>ul {
+    left: calc(-96vw * 10)
+}
+
+#radio_12:checked~.slider__wrapper>ul {
+    left: calc(-96vw * 11)
+}
+
+#radio_13:checked~.slider__wrapper>ul {
+    left: calc(-96vw * 12)
+}
+
 
 .slider__title::after {
-    
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2em;
-    color: #ffe2ad;
-}
-
-.slider__buttons {
-    margin: auto 0;
-}
- */
-
- .slider__title::after {
     content: "Здесь будет контент";
     font-family: 'Times New Roman', Times, serif;
     font-size: 2em;
