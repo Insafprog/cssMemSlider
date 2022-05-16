@@ -15,10 +15,9 @@ body {
     width: 96vw;
     height: 96vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 3vh;
+    flex-direction: column;
 }
 
 .slider input {
@@ -26,38 +25,38 @@ body {
 }
 
 .slider__wrapper {
+    display: flex;
+    flex: 0 1 95vh;
     padding: 2vh 2vw;
     width: 92vw;
-    height: 76vh;
     overflow: hidden;
 }
 
 .slider__wrapper img {
     border-radius: 10px;
-    max-height: 92vw;
-    max-width: 76vh;
+    max-width: 92vw;
+    max-height: calc(85vh - 50px);
 }
 
 .slider__wrapper  ul {
     position: relative;
-    left: 0vw;
     display: grid;
-    /* grid: 76vh / repeat(13, 92vw); */
     grid-template-columns: repeat(13, 92vw);
+    gap: 4vw;
     align-items: center;
-    transition: left 2s;
+    transition: margin-left 2s;
 }
 
 .slider__wrapper li {
     display: grid;
     width: 92vw;
-    height: 76vh;
     list-style-type: none;
     align-items: center;
     justify-content: center;
 }
 
 .nav {
+    margin-bottom: 5vh;
     display: flex;
     gap: 2px;
     flex: 0 0 auto;
@@ -89,14 +88,14 @@ body {
 #footer {
     display: flex;
     flex-wrap: wrap-reverse;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     width: 90vw;
 }
 
 .slider__title {
-    flex: 1 0 auto;
-    max-width: 85vw;
+    flex: 1 0 60vw;
+    height: calc(20px + 5vh);
 }
 
 #radio_1:checked~#footer .nav_btn_1::after,
@@ -116,111 +115,99 @@ body {
 }
 
 #radio_1:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 0)
+    margin-left: calc(-96vw * 0)
 }
 
 #radio_2:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 1)
+    margin-left: calc(-96vw * 1)
 }
 
 #radio_3:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 2)
+    margin-left: calc(-96vw * 2)
 }
 
 #radio_4:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 3)
+    margin-left: calc(-96vw * 3)
 }
 
 #radio_5:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 4)
+    margin-left: calc(-96vw * 4)
 }
 
 #radio_6:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 5)
+    margin-left: calc(-96vw * 5)
 }
 
 #radio_7:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 6)
+    margin-left: calc(-96vw * 6)
 }
 
 #radio_8:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 7)
+    margin-left: calc(-96vw * 7)
 }
 
 #radio_9:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 8)
+    margin-left: calc(-96vw * 8)
 }
 
 #radio_10:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 9)
+    margin-left: calc(-96vw * 9)
 }
 
 #radio_11:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 10)
+    margin-left: calc(-96vw * 10)
 }
 
 #radio_12:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 11)
+    margin-left: calc(-96vw * 11)
 }
 
 #radio_13:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 12)
+    margin-left: calc(-96vw * 12)
 }
 
-.slider__title::after {
+h3 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1em;
+    font-size: calc(1em + 1vw);
     color: #ffe2ad;
+    visibility: visible;
+    height: 0;
+    opacity: 0;
+    padding-right: 20px;
 }
 
-#radio_1:checked~#footer .slider__title::after {
-    content: "В любой ситуации важно взаимопонимание. В простом общении:"
+#radio_1:checked~#footer h3#title_1,
+#radio_2:checked~#footer h3#title_2,
+#radio_3:checked~#footer h3#title_3,
+#radio_4:checked~#footer h3#title_4,
+#radio_5:checked~#footer h3#title_5,
+#radio_6:checked~#footer h3#title_6,
+#radio_7:checked~#footer h3#title_7,
+#radio_8:checked~#footer h3#title_8,
+#radio_9:checked~#footer h3#title_9,
+#radio_10:checked~#footer h3#title_10,
+#radio_11:checked~#footer h3#title_11,
+#radio_12:checked~#footer h3#title_12,
+#radio_13:checked~#footer h3#title_13 {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+    transition: opacity 2s;
 }
 
-#radio_2:checked~#footer .slider__title::after {
-    content: "В общении между заказчиком, менеджером и разработчиком:"
-}
+@media (max-width: 768px) {
+    h3 {
+        text-align: center;
+        padding-right: 0;
+    }
 
-#radio_3:checked~#footer .slider__title::after {
-    content: "Или в оперативном общении по проекту:"
-}
+    .nav {
+        flex-wrap: wrap;
+        width: 94vw;
+        justify-content: center;
+    }
 
-#radio_4:checked~#footer .slider__title::after {
-    content: "Чтобы в итоге сделать хороший продукт:"
-}
-
-#radio_5:checked~#footer .slider__title::after {
-    content: "Функциональный:"
-}
-
-#radio_6:checked~#footer .slider__title::after {
-    content: "И удобный:"
-}
-
-#radio_7:checked~#footer .slider__title::after {
-    content: "Не без рабочих моментов, конечно. Recursion be like…"
-}
-
-#radio_8:checked~#footer .slider__title::after {
-    content: "Google подтвержает:"
-}
-
-#radio_9:checked~#footer .slider__title::after {
-    content: "И не только рекурсия:"
-}
-
-#radio_10:checked~#footer .slider__title::after {
-    content: "И не только рекурсия:"
-}
-
-#radio_11:checked~#footer .slider__title::after {
-    content: "И не только рекурсия:"
-}
-
-#radio_12:checked~#footer .slider__title::after {
-    content: "А в случае чего – иметь возможность откатиться назад:"
-}
-
-#radio_13:checked~#footer .slider__title::after {
-    content: "На этом все! Хороших работ."
+    .slider__wrapper img {
+        max-height: calc(83vh - 60px);
+    }
 }
