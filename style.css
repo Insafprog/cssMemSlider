@@ -15,10 +15,9 @@ body {
     width: 96vw;
     height: 96vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 3vh;
+    flex-direction: column;
 }
 
 .slider input {
@@ -26,9 +25,10 @@ body {
 }
 
 .slider__wrapper {
+    display: flex;
+    flex: 0 1 95vh;
     padding: 2vh 2vw;
     width: 92vw;
-    height: 76vh;
     overflow: hidden;
 }
 
@@ -40,9 +40,7 @@ body {
 
 .slider__wrapper  ul {
     position: relative;
-    left: 0vw;
     display: grid;
-    /* grid: 76vh / repeat(13, 92vw); */
     grid-template-columns: repeat(13, 92vw);
     gap: 4vw;
     align-items: center;
@@ -52,7 +50,6 @@ body {
 .slider__wrapper li {
     display: grid;
     width: 92vw;
-    height: 76vh;
     list-style-type: none;
     align-items: center;
     justify-content: center;
