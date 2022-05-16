@@ -35,7 +35,7 @@ body {
 .slider__wrapper img {
     border-radius: 10px;
     max-width: 92vw;
-    max-height: 76vh;
+    max-height: calc(85vh - 50px);
 }
 
 .slider__wrapper  ul {
@@ -44,7 +44,7 @@ body {
     grid-template-columns: repeat(13, 92vw);
     gap: 4vw;
     align-items: center;
-    transition: left 2s;
+    transition: margin-left 2s;
 }
 
 .slider__wrapper li {
@@ -115,65 +115,66 @@ body {
 }
 
 #radio_1:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 0)
+    margin-left: calc(-96vw * 0)
 }
 
 #radio_2:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 1)
+    margin-left: calc(-96vw * 1)
 }
 
 #radio_3:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 2)
+    margin-left: calc(-96vw * 2)
 }
 
 #radio_4:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 3)
+    margin-left: calc(-96vw * 3)
 }
 
 #radio_5:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 4)
+    margin-left: calc(-96vw * 4)
 }
 
 #radio_6:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 5)
+    margin-left: calc(-96vw * 5)
 }
 
 #radio_7:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 6)
+    margin-left: calc(-96vw * 6)
 }
 
 #radio_8:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 7)
+    margin-left: calc(-96vw * 7)
 }
 
 #radio_9:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 8)
+    margin-left: calc(-96vw * 8)
 }
 
 #radio_10:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 9)
+    margin-left: calc(-96vw * 9)
 }
 
 #radio_11:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 10)
+    margin-left: calc(-96vw * 10)
 }
 
 #radio_12:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 11)
+    margin-left: calc(-96vw * 11)
 }
 
 #radio_13:checked~.slider__wrapper>ul {
-    left: calc(-96vw * 12)
+    margin-left: calc(-96vw * 12)
 }
 
 h3 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1em;
+    font-size: calc(1em + 1vw);
     color: #ffe2ad;
     visibility: visible;
     height: 0;
     opacity: 0;
     transition: opacity 2s;
+    padding-right: 20px;
 }
 
 #radio_1:checked~#footer h3#title_1,
@@ -192,4 +193,21 @@ h3 {
     visibility: visible;
     height: auto;
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    h3 {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        width: 94vw;
+        justify-content: center;
+    }
+
+    .slider__wrapper img {
+        max-height: calc(83vh - 60px);
+    }
 }
