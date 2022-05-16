@@ -34,8 +34,8 @@ body {
 
 .slider__wrapper img {
     border-radius: 10px;
-    max-height: 92vw;
-    max-width: 76vh;
+    max-width: 92vw;
+    max-height: 76vh;
 }
 
 .slider__wrapper  ul {
@@ -44,6 +44,7 @@ body {
     display: grid;
     /* grid: 76vh / repeat(13, 92vw); */
     grid-template-columns: repeat(13, 92vw);
+    gap: 4vw;
     align-items: center;
     transition: left 2s;
 }
@@ -116,55 +117,55 @@ body {
 }
 
 #radio_1:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 0)
+    left: calc(-96vw * 0)
 }
 
 #radio_2:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 1)
+    left: calc(-96vw * 1)
 }
 
 #radio_3:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 2)
+    left: calc(-96vw * 2)
 }
 
 #radio_4:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 3)
+    left: calc(-96vw * 3)
 }
 
 #radio_5:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 4)
+    left: calc(-96vw * 4)
 }
 
 #radio_6:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 5)
+    left: calc(-96vw * 5)
 }
 
 #radio_7:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 6)
+    left: calc(-96vw * 6)
 }
 
 #radio_8:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 7)
+    left: calc(-96vw * 7)
 }
 
 #radio_9:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 8)
+    left: calc(-96vw * 8)
 }
 
 #radio_10:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 9)
+    left: calc(-96vw * 9)
 }
 
 #radio_11:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 10)
+    left: calc(-96vw * 10)
 }
 
 #radio_12:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 11)
+    left: calc(-96vw * 11)
 }
 
 #radio_13:checked~.slider__wrapper>ul {
-    left: calc(-92vw * 12)
+    left: calc(-96vw * 12)
 }
 
 .slider__title::after {
