@@ -95,6 +95,7 @@ body {
 
 .slider__title {
     flex: 1 0 60vw;
+    height: calc(20px + 5vh);
 }
 
 #radio_1:checked~#footer .nav_btn_1::after,
@@ -165,60 +166,30 @@ body {
     left: calc(-96vw * 12)
 }
 
-.slider__title::after {
+h3 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1em;
     color: #ffe2ad;
+    visibility: visible;
+    height: 0;
+    opacity: 0;
+    transition: opacity 2s;
 }
 
-#radio_1:checked~#footer .slider__title::after {
-    content: "В любой ситуации важно взаимопонимание. В простом общении:"
-}
-
-#radio_2:checked~#footer .slider__title::after {
-    content: "В общении между заказчиком, менеджером и разработчиком:"
-}
-
-#radio_3:checked~#footer .slider__title::after {
-    content: "Или в оперативном общении по проекту:"
-}
-
-#radio_4:checked~#footer .slider__title::after {
-    content: "Чтобы в итоге сделать хороший продукт:"
-}
-
-#radio_5:checked~#footer .slider__title::after {
-    content: "Функциональный:"
-}
-
-#radio_6:checked~#footer .slider__title::after {
-    content: "И удобный:"
-}
-
-#radio_7:checked~#footer .slider__title::after {
-    content: "Не без рабочих моментов, конечно. Recursion be like…"
-}
-
-#radio_8:checked~#footer .slider__title::after {
-    content: "Google подтвержает:"
-}
-
-#radio_9:checked~#footer .slider__title::after {
-    content: "И не только рекурсия:"
-}
-
-#radio_10:checked~#footer .slider__title::after {
-    content: "И не только рекурсия:"
-}
-
-#radio_11:checked~#footer .slider__title::after {
-    content: "И не только рекурсия:"
-}
-
-#radio_12:checked~#footer .slider__title::after {
-    content: "А в случае чего – иметь возможность откатиться назад:"
-}
-
-#radio_13:checked~#footer .slider__title::after {
-    content: "На этом все! Хороших работ."
+#radio_1:checked~#footer h3#title_1,
+#radio_2:checked~#footer h3#title_2,
+#radio_3:checked~#footer h3#title_3,
+#radio_4:checked~#footer h3#title_4,
+#radio_5:checked~#footer h3#title_5,
+#radio_6:checked~#footer h3#title_6,
+#radio_7:checked~#footer h3#title_7,
+#radio_8:checked~#footer h3#title_8,
+#radio_9:checked~#footer h3#title_9,
+#radio_10:checked~#footer h3#title_10,
+#radio_11:checked~#footer h3#title_11,
+#radio_12:checked~#footer h3#title_12,
+#radio_13:checked~#footer h3#title_13 {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
 }
