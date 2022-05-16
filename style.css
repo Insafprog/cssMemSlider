@@ -96,8 +96,7 @@ body {
 }
 
 .slider__title {
-    flex: 1 0 auto;
-    max-width: 85vw;
+    flex: 1 0 60vw;
 }
 
 #radio_1:checked~#footer .nav_btn_1::after,
